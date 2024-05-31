@@ -1,0 +1,20 @@
+@url=http://localhost:4000
+# 浏览器打开下面github登录链接登录
+# https://github.com/login/oauth/authorize?client_id=11751a31e1a844d40af8&scope=user:email&redirect_uri=http://localhost:4000/api/v1/user/oauth2/github?to=http://localhost:4000/api/v1/user
+post {{url}}/api/user/register
+Content-Type: application/json
+
+{
+    "email": "1234@qq.com",
+    "password": "12345"
+}
+### 
+post {{url}}/api/user/login
+Content-Type: application/json
+
+{
+    "email": "1234@qq.com",
+    "password": "12345"
+}
+### 
+get {{url}}/api/v1/index/1

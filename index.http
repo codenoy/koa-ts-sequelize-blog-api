@@ -1,0 +1,4 @@
+@port=4000
+@url=http://localhost:{{port}}/api/vi
+
+get {{url}}/index
